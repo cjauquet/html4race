@@ -144,17 +144,17 @@ text-align: center;
     color:white;
     margin-right: 250px;
     margin-left: 250px;
+    text-align: center;
+    z-index: 2;
 }
 
 .btn {
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
   border-radius: 28px;
-  font-family: Georgia;
+  font-family: 'Montserrat', sans-serif;
   color: #ffffff;
   font-size: 20px;
   background: #975C56;
-  padding: 23px 20px 23px 20px;
+  padding: 33px 30px 33px 30px;
   text-decoration: none;
   display: inline-block;
   margin-right: 400px;
@@ -169,22 +169,64 @@ text-align: center;
 }
 
 .image {
-    margin-right: 300px;
-    margin-left: 300px;
+  
+    float: center;
+    margin-left: 150px;
+    z-index: -1;
 }
 
-.squid {
-    margin-right: 300px;
-    margin-left: 400px;
+.animal {
+    color: white;
+    font: italic 700 24px/1.2 'playfair display';
+    text-align: center;
+    width: 250px;
+    display: inline-block;
+    margin: auto;
+    float: center;
+    margin-left: 70px;
 }
+
+.traits {
+    font-style: normal;
+    color:white;
+    text-align: center;
+    width: 250px;
+    display: inline-block;
+    margin: auto;
+    font-size: 14px;
+}
+
+.guessbtn {
+  border-radius: 28px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  background: #975C56;
+  padding: 23px 20px 23px 20px;
+  text-decoration: none;
+
+}
+
+
+.guessbtn:hover {
+  background: #8290AD;
+  text-decoration: none;
+}
+
+.buttonspace{
+    margin: auto;
+    padding: auto;
+    text-align: center;
+}
+
 
 .footer {
     background: rgba(130,144,173,.70) repeat-x top center scroll;
     height: 40px;
     width: 100%;
-    position: fixed;
+    position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -1;
     color: white;
     text-decoration-color: white;
     text-decoration: none;
@@ -196,7 +238,6 @@ text-align: center;
     text-align: center;
     padding-top: 30px;
 }
-
 
 .footer a {
     text-decoration: none;
@@ -213,6 +254,35 @@ text-align: center;
     text-decoration-color:white;
 }
 
+ /* button form test from codecademy */
+
+ h2 {
+    font: italic 700 26px/1.2 'playfair display';
+    color: white;
+}
+
+form {
+    display: inline-block;
+}
+
+#button{
+  display: inline-block;
+  height:20px;
+  width:70px;
+  background-color:#8290AD;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  padding-top: 5px;
+  color:#ffffff;
+  border-radius: 5px;
+  text-align:center;
+  margin-top:2px;
+}
+
+.list {
+  font: italic 700 24px/1.2 'playfair display';
+  color:white;
+}
 
 
 

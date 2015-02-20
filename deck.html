@@ -1,0 +1,43 @@
+<!Doctype html>
+
+<html>
+  <head>
+      <title>Deck of Cards</title>
+  </head>
+  <body>
+    <ul id="deck">
+    </ul>  
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.is"></script>
+    <script type ="text/javascript">
+      function Card(suit, rank) {
+        this.suit = suit;
+        this.rank = rank;
+        this.toHTML = function(){
+          return "<li>" + this.rank + "-" + this.suit + "<li>";
+        }
+        }
+
+      function Deck (){
+        thisDeck = $('#deck');
+        this.suits = ['H', 'C', 'P', 'S'];
+        this.ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '10', '3', '0', 'K'];
+
+        $.each(this.suits, function
+          var suit = this;          
+          $.each(thisDeck.ranks, function(){
+            var rank = this;
+            var card = new Card(rank, suit);
+            $('#deck').append(card.toHTML());  
+          });
+        });
+      }
+
+      var deck = new Deck();
+
+
+
+    </script>
+
+  </body>
+</html>
+
