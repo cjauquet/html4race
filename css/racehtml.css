@@ -56,6 +56,9 @@ table {
 
 /* Global Settings */
 
+html, body {
+  height: 100%;
+}
 
 .border {
     background: black url(../images/deepseabk.jpg);
@@ -115,7 +118,8 @@ text-align: center;
 }
 
 #wrapper {
-    width:900px;
+    width: auto;
+    display: block;
     margin-left: auto;
     margin-right: auto;
     
@@ -130,9 +134,15 @@ text-align: center;
     letter-spacing: 3px;
     text-align: center;
     margin-top: 10px;
-    margin-right: 300px;
-    margin-left: 250px;
+    /*margin-right: 300px;
+    margin-left: 250px;*/
     line-height: 27px;
+    display: flex; 
+    justify-content:space-around;
+    display: -webkit-flex; 
+    -webkit-justify-content:space-around;
+    flex-wrap:wrap;
+    -webkit-flex-wrap:wrap;
 }
 
 .aboutp {
@@ -171,8 +181,23 @@ text-align: center;
 .image {
   
     float: center;
-    margin-left: 150px;
     z-index: -1;
+     display: flex; 
+    justify-content:space-around;
+    display: -webkit-flex; 
+    -webkit-justify-content:space-around;
+    flex-wrap:wrap;
+    -webkit-flex-wrap:wrap;
+}
+
+.anchor {
+   display: flex; 
+    justify-content:space-around;
+    display: -webkit-flex; 
+    -webkit-justify-content:space-around;
+    flex-wrap:wrap;
+    -webkit-flex-wrap:wrap;
+    margin-bottom: 30px;
 }
 
 .animal {
@@ -180,10 +205,21 @@ text-align: center;
     font: italic 700 24px/1.2 'playfair display';
     text-align: center;
     width: 250px;
-    display: inline-block;
-    margin: auto;
-    float: center;
-    margin-left: 70px;
+    /*display: inline-block;*/
+    /*margin: auto;*/
+    /*float: center;*/
+    margin-bottom: 60px;
+}
+
+.centerinbox{
+    display: flex; 
+    justify-content:space-around;
+    display: -webkit-flex; 
+    -webkit-justify-content:space-around;
+    flex-wrap:wrap;
+    -webkit-flex-wrap:wrap;
+    margin-bottom: 20px;
+
 }
 
 .traits {
@@ -196,29 +232,12 @@ text-align: center;
     font-size: 14px;
 }
 
-.guessbtn {
-  border-radius: 28px;
-  font-family: 'Montserrat', sans-serif;
-  color: #ffffff;
-  font-size: 16px;
-  background: #975C56;
-  padding: 23px 20px 23px 20px;
-  text-decoration: none;
-
-}
-
-
-.guessbtn:hover {
-  background: #8290AD;
-  text-decoration: none;
-}
 
 .buttonspace{
     margin: auto;
     padding: auto;
     text-align: center;
 }
-
 
 .footer {
     background: rgba(130,144,173,.70) repeat-x top center scroll;
@@ -259,15 +278,30 @@ text-align: center;
  h2 {
     font: italic 700 26px/1.2 'playfair display';
     color: white;
+    text-align: center;
 }
 
 form {
     display: inline-block;
+    text-align:center;
+    margin-left: 400px;
+    margin-top: 10px;
+    display: flex; 
+    display: flex; 
+  
 }
 
-#button{
+
+
+.list {
+  font: italic 700 24px/1.2 'playfair display';
+  color:white;
+  text-align: center;
+}
+
+.button {
   display: inline-block;
-  height:20px;
+  height:30px;
   width:70px;
   background-color:#8290AD;
   font-family: 'Montserrat', sans-serif;
@@ -275,18 +309,40 @@ form {
   padding-top: 5px;
   color:#ffffff;
   border-radius: 5px;
-  text-align:center;
   margin-top:2px;
+  margin-left: 10px;
 }
 
-.list {
-  font: italic 700 24px/1.2 'playfair display';
-  color:white;
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -40px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+html, body {
+  height: 100%;
+}
+
+.sfooter, .page-wrap:after {
+  height: 142px; 
+}
+
+#picTwo {
+  display:none;
 }
 
 
+#pick {
+  
+    margin-left: 590px;
+}
 
-
+#startrace {
+    margin-left: 590px;
+}
 
 
 

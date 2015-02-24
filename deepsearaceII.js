@@ -1,6 +1,6 @@
-$('#startRace').on('submit', function() {
-  var bet = $('input[name=checkListForm]').val();
 
+$('#startRace').on('click', function(){
+  var bet = $('#pick').val(); 
   var Animal = function(n, s, f, z, i) {
     this.name = n;
     this.speed = s;
@@ -18,13 +18,13 @@ $('#startRace').on('submit', function() {
     };
   }
 
-  var squid = new Animal("Willy", 4, 9, 7, 2), 
-    lobster = new Animal("Frank", 1, 6, 4, 5),
-    shark = new Animal("Stella", 9, 4, 9, 5),
-    anglerfish = new Animal("Ricardo", 7, 4, 3, 5);
+  var squid = new Animal("Willy", 1.5, 7, 4, 5), 
+    lobster = new Animal("Frank", 2, 4, 3, 1),
+    shark = new Animal("Stella", .5, 5, 2, 2),
+    anglerfish = new Animal("Ricardo", 3, 4, 9, 9);
 
   var distance = 50;
-  var deepestbaddest; 
+  var winner;
   
   while(squid.position < distance && lobster.position < distance && shark.position < distance && anglerfish.position < distance) { 
     squid.run();
@@ -53,18 +53,20 @@ $('#startRace').on('submit', function() {
     message = "Ricardo the Anglerfish has won."
   };
 
-
   console.log(squid.report());
   console.log(lobster.report());
   console.log(shark.report());
   console.log(anglerfish.report());
 
- if(winner === bet) {
-  message = "you won!";
- }
+  if(winner === bet) {
+      message = "You are the winner!";
+  }
+  else {
+      message = "You lost!";
+  }
 
- else{
-  message = "you lost!";
- }
+  $('.character').fadeout();
+  $('#' + winner).stop();
+});
 
-)};
+  

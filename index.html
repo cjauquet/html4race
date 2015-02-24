@@ -9,9 +9,11 @@
         <h1></h1>
         <nav><a href="index.html">HOME</a> | <a href="about.html">ABOUT</a></nav>
 
+        <div class="page-wrap">
         <section class="header">
             <a href="http://www.google.com/webfonts/specimen/Playfair+Display" title="Playfair Display">
                 <h1 class="first">Partysquid</h1>
+                <br>
                 <h1 class="second">Squid Race</h1>
             </a>  
         </section>
@@ -23,11 +25,22 @@
         <br>
         <br>
         <br>
-        <a href="game.html" class="btn">BEGIN GAME</a>
+        <section class="anchor">
+                <a href="game.html"><img src="images/anchor.png" alt="Begin" id='picTwo'>
+        </section>
         </div>
-
+        </div>
         <footer class="footer">
             <a href="about.html">ABOUT</a>  <a href="mailto:clarajauquet@gmail.com?Subject=Hello%20again" target="_top">EMAIL</a>
         </footer>
+
+        <script src="http://code.jquery.com/jquery-1.4.4.min.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+        $(document).ready(function() { 
+            $('#picTwo').delay(1000).fadeIn(1500);
+        });
+        </script>
+
     </body>
 </html>
