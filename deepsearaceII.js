@@ -18,10 +18,10 @@ $('#startRace').on('click', function(){
     };
   }
 
-  var squid = new Animal("Willy", 1.5, 7, 4, 5), 
-    lobster = new Animal("Frank", 2, 4, 3, 1),
-    shark = new Animal("Stella", .5, 5, 2, 2),
-    anglerfish = new Animal("Ricardo", 3, 4, 9, 9);
+  var squid = new Animal("Willy", 4, 9, 7, 9), 
+    lobster = new Animal("Frank", 1, 6, 4, 5),
+    shark = new Animal("Stella", 9, 2, 8, 3),
+    anglerfish = new Animal("Ricardo", 7, 4, 3, 5);
 
   var distance = 50;
   var winner;
@@ -34,17 +34,17 @@ $('#startRace').on('click', function(){
   };
 
   if(squid.position > lobster.position && squid.position > shark.position && squid.position > anglerfish.position) {
-    deepestbaddest = squid.name;
+    winner = squid.name;
     message = " Willy the Squid has won."
   }
 
   else if(lobster.position > squid.position && lobster.position > shark.position && lobster.position > anglerfish.position) {
-    deepestbaddest = lobster.name;
-    message = "Frank the Shark has won."
+    winner = lobster.name;
+    message = "Frank the lobster has won."
   }
 
   else if(shark.position > squid.position && shark.position > lobster.position && shark.position > anglerfish.position){
-    deepestbaddest = shark.name;
+    winner = shark.name;
     message = "Stella the Shark has won."
   }
 
@@ -65,7 +65,7 @@ $('#startRace').on('click', function(){
       message = "You lost!";
   }
 
-  $('.character').fadeout();
+  $('.animal').fadeOut();
   $('#' + winner).stop();
 });
 
